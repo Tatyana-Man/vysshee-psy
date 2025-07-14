@@ -186,7 +186,7 @@
     .btn-link:hover {
       background-color: #563d82;
     }
-<style>
+
   .responsive-table {
     width: 100%;
     border-collapse: collapse;
@@ -244,4 +244,4 @@
       content: attr(data-label);
     }
   }
-</style>
+
