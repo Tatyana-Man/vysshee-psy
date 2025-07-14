@@ -186,3 +186,62 @@
     .btn-link:hover {
       background-color: #563d82;
     }
+<style>
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .responsive-table thead {
+    background: #f2f2f2;
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  /* Мобильный стиль */
+  @media (max-width: 768px) {
+    .responsive-table,
+    .responsive-table thead,
+    .responsive-table tbody,
+    .responsive-table th,
+    .responsive-table td,
+    .responsive-table tr {
+      display: block;
+    }
+
+    .responsive-table thead {
+      display: none;
+    }
+
+    .responsive-table tr {
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 12px;
+      background: #fff;
+    }
+
+    .responsive-table td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+      white-space: normal;
+    }
+
+    .responsive-table td::before {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: bold;
+      content: attr(data-label);
+    }
+  }
+</style>
