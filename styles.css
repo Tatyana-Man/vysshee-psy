@@ -1,65 +1,81 @@
-/* ===============================
-   VARIABLES (iOS GLASS)
-================================ */
+/* ==================================================
+   DESIGN TOKENS
+================================================== */
 :root {
+  --bg-main: linear-gradient(135deg, #ebe9ff, #f7f6ff);
   --glass-bg: rgba(255, 255, 255, 0.28);
   --glass-border: rgba(255, 255, 255, 0.45);
   --glass-shadow: 0 10px 36px rgba(0, 0, 0, 0.12);
+
   --accent: #7c6cff;
+  --accent-soft: rgba(124,108,255,.75);
+
   --text-main: #1f2937;
+  --text-muted: #6b7280;
 }
 
-/* ===============================
-   BASE
-================================ */
+/* ==================================================
+   RESET
+================================================== */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Arial, sans-serif;
-  background: linear-gradient(135deg, #ebe9ff, #f7f6ff);
-  color: var(--text-main);
+  padding: 0;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
-/* ===============================
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Arial, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.65;
+}
+
+/* ==================================================
    HEADER
-================================ */
+================================================== */
 header {
-  margin: 20px;
-  padding: 26px;
+  max-width: 960px;
+  margin: 20px auto 14px;
+  padding: 28px 24px;
   text-align: center;
+
   background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  border-radius: 22px;
+  backdrop-filter: blur(18px);
+  border-radius: 26px;
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
 }
 
 header h1 {
   margin: 0 0 10px;
-  font-size: 2.1em;
+  font-size: 2rem;
 }
 
 header p {
   margin: 0;
-  opacity: 0.85;
+  font-size: 1rem;
+  color: var(--text-muted);
 }
 
-/* ===============================
-   NAV
-================================ */
+/* ==================================================
+   NAVIGATION
+================================================== */
 nav {
-  margin: 20px;
+  max-width: 960px;
+  margin: 14px auto;
   padding: 14px;
   text-align: center;
+
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
-  border-radius: 20px;
+  border-radius: 22px;
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
 }
@@ -68,161 +84,215 @@ nav a {
   display: inline-block;
   margin: 6px 8px;
   padding: 10px 22px;
+
   color: #fff;
-  background: linear-gradient(135deg, rgba(124,108,255,.9), rgba(124,108,255,.65));
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
   border-radius: 14px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
 nav a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(124,108,255,0.45);
+  box-shadow: 0 8px 26px rgba(124,108,255,.45);
 }
 
-/* ===============================
-   MAIN
-================================ */
+/* ==================================================
+   MAIN CONTAINER
+================================================== */
 main {
-  max-width: 900px;
-  margin: 24px auto;
-  padding: 28px;
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 26px;
+
   background: var(--glass-bg);
-  backdrop-filter: blur(18px);
-  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  border-radius: 28px;
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
 }
 
-/* ===============================
-   HEADINGS
-================================ */
+/* ==================================================
+   TYPOGRAPHY
+================================================== */
 h2 {
-  margin-top: 0;
-  font-size: 1.6em;
+  margin: 32px 0 14px;
+  font-size: 1.55rem;
   color: var(--accent);
   border-left: 4px solid var(--accent);
-  padding-left: 12px;
+  padding-left: 14px;
 }
 
-/* ===============================
-   LISTS
-================================ */
-ul li,
-ol li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-}
-
-/* ===============================
-   COURSE CARDS
-================================ */
-.course {
-  margin: 18px 0;
-  padding: 22px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(14px);
-  border-radius: 20px;
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
-  transition: transform 0.3s ease;
-}
-
-.course:hover {
-  transform: translateY(-4px);
-}
-
-.course h3 {
-  margin-top: 0;
+h3 {
+  margin: 24px 0 10px;
+  font-size: 1.25rem;
   color: var(--accent);
 }
 
-/* ===============================
-   BUTTONS
-================================ */
-.btn,
-.btn-link {
-  display: inline-block;
-  padding: 12px 24px;
-  color: #fff;
-  background: linear-gradient(135deg, rgba(124,108,255,.9), rgba(124,108,255,.65));
-  backdrop-filter: blur(10px);
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.5);
-  text-decoration: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+p {
+  margin: 0 0 14px;
 }
 
-.btn:hover,
-.btn-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(124,108,255,0.45);
+ul, ol {
+  padding-left: 20px;
+  margin: 0 0 18px;
 }
 
-/* ===============================
+li {
+  margin-bottom: 8px;
+}
+
+/* ==================================================
    LINKS
-================================ */
+================================================== */
 a {
   color: var(--accent);
 }
 
-/* ===============================
-   IMAGES – ADAPTIVE
-================================ */
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==================================================
+   COURSE CARDS
+================================================== */
+.course {
+  margin: 22px 0;
+  padding: 24px;
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
+  transition: transform .3s ease;
+}
+
+.course:hover {
+  transform: translateY(-3px);
+}
+
+/* ==================================================
+   IMAGES
+================================================== */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-main img {
+.school-image {
   width: 100%;
-  height: auto;
-  border-radius: 16px;
-  margin: 20px 0;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  margin: 18px 0;
+  border-radius: 18px;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.15);
 }
 
-/* ===============================
-   TABLE – DESKTOP
-================================ */
-table {
+/* ==================================================
+   BUTTONS
+================================================== */
+.btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 28px;
+
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.45);
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(124,108,255,.45);
+}
+
+/* ==================================================
+   TABLE (ROUNDED HEADER)
+================================================== */
+.responsive-table {
   width: 100%;
+  margin-top: 20px;
+
   border-collapse: separate;
   border-spacing: 0;
+
   background: var(--glass-bg);
-  border-radius: 20px;
+  border-radius: 22px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
 }
 
-th, td {
+.responsive-table th,
+.responsive-table td {
   padding: 14px;
   text-align: left;
 }
 
-thead th {
+.responsive-table thead th {
   background: rgba(124,108,255,.35);
   color: #fff;
   font-weight: 600;
 }
 
-tbody tr:nth-child(odd) {
+.responsive-table thead th:first-child {
+  border-top-left-radius: 22px;
+}
+
+.responsive-table thead th:last-child {
+  border-top-right-radius: 22px;
+}
+
+.responsive-table tbody tr:nth-child(odd) {
   background: rgba(255,255,255,.18);
 }
 
-/* ===============================
-   RESPONSIVE TABLE – MOBILE
-================================ */
-.responsive-table {
-  width: 100%;
+/* ==================================================
+   FOOTER
+================================================== */
+footer {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border-radius: 22px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
 }
 
+/* ==================================================
+   MOBILE
+================================================== */
 @media (max-width: 768px) {
+
+  header h1 {
+    font-size: 1.65rem;
+  }
+
+  header,
+  nav,
+  main,
+  footer {
+    margin: 12px;
+  }
+
+  main {
+    padding: 22px;
+  }
 
   .responsive-table,
   .responsive-table thead,
@@ -247,43 +317,6 @@ tbody tr:nth-child(odd) {
   }
 
   .responsive-table td {
-    padding: 10px 0;
-    border: none;
+    padding: 8px 0;
   }
-
-  .responsive-table td::before {
-    content: attr(data-label);
-    display: block;
-    margin-bottom: 4px;
-    font-weight: 600;
-    color: var(--accent);
-  }
-
-  main {
-    margin: 12px;
-    padding: 20px;
-  }
-
-  header,
-  nav,
-  footer {
-    margin: 12px;
-  }
-
-  header h1 {
-    font-size: 1.7em;
-  }
-}
-
-/* ===============================
-   FOOTER
-================================ */
-footer {
-  margin: 24px;
-  padding: 18px;
-  text-align: center;
-  background: var(--glass-bg);
-  border-radius: 20px;
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
 }
