@@ -1,254 +1,289 @@
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f3f0f9; /* Светло-фиолетовый фон */
-            color: #2c3e50; /* Темно-серый текст */
-        }
-        header {
-            background-color: #6a4c93; /* Темно-фиолетовый */
-            padding: 10px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 10px;
-            padding: 10px;
-            font-size: 2em;
-            color: #ffffff; /* Белый текст */
-        }
-         header p {
-            margin: 5px;
-            padding: 5px;
-            font-size: 1em;
-            color: #ffffff; /* Белый текст */
-        }
-        .school-image {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 20px auto;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-        nav {
-            margin-top: 10px;
-            background-color: #513a70; /* Темно-темно-фиолетовый */
-            text-align: center;
-            padding: 15px;
-        }
-        nav a {
-            background-color: #9c6ade; /* Средне-фиолетовый */
-            color: #ffffff; /* Белый текст */
-            text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 5px; /* Округлые края */
-            margin: 0 10px;
-            font-weight: bold;
-            font-size: 1.1em;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-        nav a:hover {
-            background-color: #f3f0f9; /* Светло-фиолетовый при наведении */
-            text-decoration: none;
-            color: #9c6ade; /* Средне-фиолетовый текст */
-        }
-        main {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff; /* Белый фон */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h2 {
-            font-size: 1.5em;
-            color: #9c6ade; /* Средне-фиолетовый */
-            border-left: 5px solid #9c6ade; /* Полоса слева */
-            padding-left: 10px;
-        }
-
-        ul li,
-        ol li {
-    margin-bottom: 6px;   /* расстояние между пунктами */
-    line-height: 1.5;     /* комфортная высота строки */
+/* ===============================
+   VARIABLES (iOS GLASS)
+================================ */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.28);
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-shadow: 0 10px 36px rgba(0, 0, 0, 0.12);
+  --accent: #7c6cff;
+  --text-main: #1f2937;
 }
 
-        .course {
-            padding: 15px;
-            margin: 15px 0;
-            background: #f8f8f8; /* Светло-серый */
-            border-radius: 5px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-        .course h3 {
-            margin: 0;
-            color: #9c6ade; /* Средне-фиолетовый */
-        }
-        .course p {
-            margin: 10px 0 10px;
-            line-height: 1.5;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 15px;
-            font-size: 1em;
-            font-weight: bold;
-            color: #ffffff;
-            background-color: #6a4c93;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #9c6ade;
-            text-decoration: none;
-            color: #ffffff; /* Темно-фиолетовый текст */
-        }
-        a {
-            color: #9c6ade; /* Средне-фиолетовый */
-            text-decoration: underline;
-        }
-        a:hover {
-            color: #6a4c93; /* Темно-фиолетовый при наведении */
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 15px 10px;
-            background-color: #6a4c93; /* Темно-фиолетовый */
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #ffffff; /* Белый текст */
-        }
-        footer a {
-            color: #e9d8fd; /* Светло-фиолетовый */
-            text-decoration: underline;
-        }
-        footer a:hover {
-            color: #d0d0d0; /* Темнее при наведении */
-            text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            main {
-                margin: 10px; 
-                padding: 15px;
-            }
-            header h1 {
-                font-size: 1.6em;
-            }
-            nav a {
-                font-size: 1em;
-                margin: 5px;
-                padding: 6px 12px;
-            }
-        }
+/* ===============================
+   BASE
+================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-    table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    th, td {
-      padding: 14px;
-      text-align: left;
-      vertical-align: top;
-    }
-    thead th {
-      background-color: #6a4c93;
-      color: white;
-      font-size: 16px;
-    }
-    tbody tr:nth-child(odd) {
-      background-color: #f4f1f9;
-    }
-    tbody tr:hover {
-      background-color: #ece3f5;
-    }
-    td a {
-      color: #6a4c93;
-      text-decoration: none;
-    }
-    td a:hover {
-      text-decoration: underline;
-    }
-    .btn-link {
-      display: inline-block;
-      padding: 6px 14px;
-      background-color: #6a4c93;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 500;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: background-color 0.2s ease;
-    }
-    .btn-link:hover {
-      background-color: #563d82;
-    }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Arial, sans-serif;
+  background: linear-gradient(135deg, #ebe9ff, #f7f6ff);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
 
-  .responsive-table {
+/* ===============================
+   HEADER
+================================ */
+header {
+  margin: 20px;
+  padding: 26px;
+  text-align: center;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border-radius: 22px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 2.1em;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* ===============================
+   NAV
+================================ */
+nav {
+  margin: 20px;
+  padding: 14px;
+  text-align: center;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+nav a {
+  display: inline-block;
+  margin: 6px 8px;
+  padding: 10px 22px;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(124,108,255,.9), rgba(124,108,255,.65));
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(124,108,255,0.45);
+}
+
+/* ===============================
+   MAIN
+================================ */
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 28px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+h2 {
+  margin-top: 0;
+  font-size: 1.6em;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+}
+
+/* ===============================
+   LISTS
+================================ */
+ul li,
+ol li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* ===============================
+   COURSE CARDS
+================================ */
+.course {
+  margin: 18px 0;
+  padding: 22px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.course:hover {
+  transform: translateY(-4px);
+}
+
+.course h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn,
+.btn-link {
+  display: inline-block;
+  padding: 12px 24px;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(124,108,255,.9), rgba(124,108,255,.65));
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(124,108,255,0.45);
+}
+
+/* ===============================
+   LINKS
+================================ */
+a {
+  color: var(--accent);
+}
+
+/* ===============================
+   IMAGES – ADAPTIVE
+================================ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 20px 0;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   TABLE – DESKTOP
+================================ */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--glass-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+}
+
+thead th {
+  background: rgba(124,108,255,.35);
+  color: #fff;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(255,255,255,.18);
+}
+
+/* ===============================
+   RESPONSIVE TABLE – MOBILE
+================================ */
+.responsive-table {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .responsive-table,
+  .responsive-table thead,
+  .responsive-table tbody,
+  .responsive-table tr,
+  .responsive-table td {
+    display: block;
     width: 100%;
-    border-collapse: collapse;
   }
 
   .responsive-table thead {
-    background: #f2f2f2;
+    display: none;
   }
 
-  .responsive-table th,
+  .responsive-table tr {
+    margin-bottom: 16px;
+    padding: 16px;
+    background: var(--glass-bg);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
   .responsive-table td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
+    padding: 10px 0;
+    border: none;
   }
 
-  /* Мобильный стиль */
-  @media (max-width: 768px) {
-    .responsive-table,
-    .responsive-table thead,
-    .responsive-table tbody,
-    .responsive-table th,
-    .responsive-table td,
-    .responsive-table tr {
-      display: block;
-    }
-
-    .responsive-table thead {
-      display: none;
-    }
-
-    .responsive-table tr {
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      padding: 12px;
-      background: #fff;
-    }
-
-    .responsive-table td {
-      border: none;
-      position: relative;
-      padding-left: 50%;
-      white-space: normal;
-    }
-
-    .responsive-table td::before {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-      font-weight: bold;
-      content: attr(data-label);
-    }
+  .responsive-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: var(--accent);
   }
 
+  main {
+    margin: 12px;
+    padding: 20px;
+  }
+
+  header,
+  nav,
+  footer {
+    margin: 12px;
+  }
+
+  header h1 {
+    font-size: 1.7em;
+  }
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  margin: 24px;
+  padding: 18px;
+  text-align: center;
+  background: var(--glass-bg);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
